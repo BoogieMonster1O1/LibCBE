@@ -6,6 +6,9 @@ import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.world.BlockView;
 
+/**
+ * Extend this class if you want conditional block entities
+ */
 public abstract class ConditionalBlockWithEntity extends BlockWithEntity implements ConditionalBlockEntityProvider {
     public ConditionalBlockWithEntity(Settings settings) {
         super(settings);
