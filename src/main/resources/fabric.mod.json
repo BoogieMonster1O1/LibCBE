@@ -1,16 +1,18 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "libcbe",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "LibCBE",
+  "description": "Conditional Block Entities",
   "authors": [
-    "Me!"
+    "BoogieMonster1O1"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/BoogieMonster1O1/libcbe",
+    "sources": "https://github.com/BoogieMonster1O1/libcbe.git",
+    "issues": "https://github.com/BoogieMonster1O1/libcbe/issues",
+    "irc": "irc://irc.esper.net:6667/legacyfabric"
   },
 
   "license": "CC0-1.0",
@@ -19,19 +21,16 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "io.github.boogiemonster1o1.libcbe.impl.LibCBEInitializer"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "libcbe.mixins.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
     "minecraft": "1.16.x"
-  },
-  "suggests": {
-    "flamingo": "*"
   }
 }

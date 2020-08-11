@@ -18,6 +18,8 @@ classes/
 
 # vscode
 
+
+
 .settings/
 .vscode/
 bin/
@@ -27,3 +29,5 @@ bin/
 # fabric
 
 run/
+
+.DS_Store
