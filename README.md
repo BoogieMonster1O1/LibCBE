@@ -24,7 +24,7 @@ dependencies {
 ```
 
 
-Add the property to `gradle.properties`. Skip this step if you decide to put the version in the dependencies. 
+Add the property to `gradle.properties`. Skip this step if you decide to put the version in the dependency. 
 ```properties
 libcbe_version = 1.0.0
 ```
