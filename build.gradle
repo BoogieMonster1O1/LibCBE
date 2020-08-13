@@ -1,13 +1,24 @@
+buildscript {
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.+'
+	}
+}
 plugins {
 	id 'fabric-loom' version '0.4-SNAPSHOT'
 	id 'maven-publish'
+	id 'signing'
 }
+
+apply plugin: 'com.jfrog.bintray'
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
 archivesBaseName = project.archives_base_name
-version = project.mod_version
+version = project.mod_version as Object
 group = project.maven_group
 
 dependencies {
@@ -57,6 +68,28 @@ jar {
 	from "LICENSE"
 }
 
+bintray {
+	user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
+	key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_KEY')
+	publications = ["mavenJava"]
+	publish = true
+	pkg {
+		repo = "cool-mods"
+		name = "LibCBE"
+		licenses = ["CC0-1.0"]
+		version {
+			released = new Date()
+			githubRepo = 'BoogieMonster1O1/libcbe'
+			websiteUrl = 'https://github.com/BoogieMonster1O1/libcbe'
+			issueTrackerUrl = 'https://github.com/BoogieMonster1O1/libcbe/issues'
+			vcsUrl = 'https://github.com/BoogieMonster1O1/libcbe.git'
+			gpg {
+				sign = true
+			}
+		}
+	}
+}
+
 // configure the maven publication
 publishing {
 	publications {
@@ -67,6 +100,12 @@ publishing {
 			}
 			artifact(sourcesJar) {
 				builtBy remapSourcesJar
+			}
+			pom.withXml {
+				def root = asNode()
+				root.appendNode('description', 'Conditional Block Entities')
+				root.appendNode('name', 'LibCBE')
+				root.appendNode('url', 'https://github.com/BoogieMonster1O1/libcbe')
 			}
 		}
 	}

@@ -31,3 +31,4 @@ bin/
 run/
 
 .DS_Store
+upload.sh
