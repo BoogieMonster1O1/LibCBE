@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "libcbe",
+  "id": "libcbetest",
   "version": "${version}",
-  "name": "LibCBE",
-  "description": "Conditional Block Entities",
+  "name": "LibCBE Test",
+  "description": "A test mod",
   "authors": [
     "BoogieMonster1O1"
   ],
@@ -14,11 +14,15 @@
     "irc": "irc://irc.esper.net:6667/legacyfabric"
   },
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
   "environment": "*",
-  "mixins": [
-    "libcbe.mixins.json"
-  ],
+  "entrypoints": {
+    "main": [
+      "io.github.boogiemonster1o1.libcbe.test.LibCBETest"
+    ],
+    "client": [
+      "io.github.boogiemonster1o1.libcbe.test.LibCBETest"
+    ]
+  },
   "depends": {
     "fabricloader": ">=0.8.0",
     "minecraft": "1.16.x"
