@@ -16,17 +16,15 @@ repositories {
 Add the dependency 
 ```gradle
 dependencies {
-    modImplementation("io.github.boogiemonster1o1:LibCBE:${libcbe_version}") {
-        exclude module: 'fabric-api' // Add this line to prevent an extra version of api getting pulled. LibCBE doesn't use api anyway, but the tests do
-    }
-    include "io.github.boogiemonster1o1:LibCBE:${libcbe_version}" // Optional, but makes it easier for users
+    modImplementation("io.github.boogiemonster1o1:LibCBE:${libcbe_version}")
+    include("io.github.boogiemonster1o1:LibCBE:${libcbe_version}") // Includes LibCBE as a Jar-in-Jar embedded dependency
 }
 ```
 
 
 Add the property to `gradle.properties`. Skip this step if you decide to put the version in the dependency. 
 ```properties
-libcbe_version = 1.0.0
+libcbe_version = 1.1.0
 ```
 Find the latest version at [https://dl.bintray.com/boogiemonster1o1/cool-mods/io/github/boogiemonster1o1/libcbe/](https://dl.bintray.com/boogiemonster1o1/cool-mods/io/github/boogiemonster1o1/libcbe/)
 
