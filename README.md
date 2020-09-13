@@ -24,7 +24,7 @@ dependencies {
 
 Add the property to `gradle.properties`. Skip this step if you decide to put the version in the dependency. 
 ```properties
-libcbe_version = 1.1.0
+libcbe_version = 1.1.1
 ```
 Find the latest version at [https://dl.bintray.com/boogiemonster1o1/cool-mods/io/github/boogiemonster1o1/libcbe/](https://dl.bintray.com/boogiemonster1o1/cool-mods/io/github/boogiemonster1o1/libcbe/)
 
