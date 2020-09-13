@@ -17,7 +17,7 @@ import net.minecraft.world.chunk.Chunk;
 @Mixin(ChunkRegion.class)
 public abstract class MixinChunkRegion implements BlockView {
     @Redirect(method = "setBlockState", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/chunk/Chunk;setBlockEntity(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/entity/BlockEntity;)V"))
-    public void setBlockState(Chunk chunk, BlockPos pos, BlockEntity blockEntity, BlockPos blockPos, BlockState state, int flags, int maxUpdateDepth) {
+    public void setBlockEntityInSetBlockState(Chunk chunk, BlockPos pos, BlockEntity blockEntity, BlockPos blockPos, BlockState state, int flags, int maxUpdateDepth) {
         if(this.getBlockState(pos).getBlock() instanceof ConditionalBlockEntityProvider) {
             ConditionalBlockEntityProvider cbeBlock = (ConditionalBlockEntityProvider) this.getBlockState(pos).getBlock();
             if(cbeBlock.hasBlockEntity(state) || cbeBlock.hasBlockEntity(pos, this)) {
