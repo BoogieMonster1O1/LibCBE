@@ -8,8 +8,8 @@ LibCBE is on the JCenter. You do not need to add it as a repository as it is aut
 Add the dependency 
 ```gradle
 dependencies {
-    modImplementation("io.github.boogiemonster1o1:LibCBE:${libcbe_version}")
-    include("io.github.boogiemonster1o1:LibCBE:${libcbe_version}") // Includes LibCBE as a Jar-in-Jar embedded dependency
+    modImplementation("io.github.boogiemonster1o1:LibCBE:${project.libcbe_version}")
+    include("io.github.boogiemonster1o1:LibCBE:${project.libcbe_version}") // Includes LibCBE as a Jar-in-Jar embedded dependency
 }
 ```
 
