@@ -3,15 +3,7 @@
 Conditional Block Entities. 
 
 ## Usage
-Add the repository
-```gradle
-repositories {
-    maven {
-        url = 'https://dl.bintray.com/boogiemonster1o1/cool-mods/'
-    }
-}
-```
-
+LibCBE is on the JCenter. You do not need to add it as a repository as it is automatically added by loom. 
 
 Add the dependency 
 ```gradle
@@ -26,7 +18,7 @@ Add the property to `gradle.properties`. Skip this step if you decide to put the
 ```properties
 libcbe_version = 1.1.2
 ```
-Find the latest version at [https://dl.bintray.com/boogiemonster1o1/cool-mods/io/github/boogiemonster1o1/libcbe/](https://dl.bintray.com/boogiemonster1o1/cool-mods/io/github/boogiemonster1o1/libcbe/)
+Find the latest version [here](https://bintray.com/beta/#/boogiemonster1o1/cool-mods/LibCBE?tab=overview)
 
 ## License
 This mod is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
