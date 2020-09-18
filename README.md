@@ -16,9 +16,10 @@ dependencies {
 
 Add the property to `gradle.properties`. Skip this step if you decide to put the version in the dependency. 
 ```properties
-libcbe_version = 1.1.2
+libcbe_version = <the latest version>
 ```
-Find the latest version [here](https://bintray.com/beta/#/boogiemonster1o1/cool-mods/LibCBE?tab=overview)
+[ ![Download](https://api.bintray.com/packages/boogiemonster1o1/cool-mods/LibCBE/images/download.svg) ](https://bintray.com/boogiemonster1o1/cool-mods/LibCBE/_latestVersion)
+Find all versions [here](https://bintray.com/beta/#/boogiemonster1o1/cool-mods/LibCBE?tab=overview)
 
 ## License
 This mod is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
