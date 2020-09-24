@@ -3,20 +3,13 @@
 Conditional Block Entities. 
 
 ## Usage
-Add the repository
-```gradle
- repositories {
-     maven {
-         url = 'https://dl.bintray.com/boogiemonster1o1/cool-mods/'
-     }
- }
- ```
+LibCBE is on the JCenter. Loom automatically adds it as a repository
 
-Add the dependency 
+All that's required is to add the dependency 
 ```gradle
 dependencies {
-    modImplementation("io.github.boogiemonster1o1:LibCBE:${project.libcbe_version}")
-    include("io.github.boogiemonster1o1:LibCBE:${project.libcbe_version}") // Includes LibCBE as a Jar-in-Jar embedded dependency
+    modImplementation("io.github.boogiemonster1o1:libcbe:${project.libcbe_version}")
+    include("io.github.boogiemonster1o1:libcbe:${project.libcbe_version}") // Includes LibCBE as a Jar-in-Jar embedded dependency
 }
 ```
 
