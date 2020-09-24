@@ -5,6 +5,15 @@ Conditional Block Entities.
 ## Usage
 LibCBE is on the JCenter. You do not need to add it as a repository as it is automatically added by loom. 
 
+Add the repository
+```gradle
+ repositories {
+     maven {
+         url = 'https://dl.bintray.com/boogiemonster1o1/cool-mods/'
+     }
+ }
+ ```
+
 Add the dependency 
 ```gradle
 dependencies {
